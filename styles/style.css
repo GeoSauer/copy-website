@@ -1,0 +1,46 @@
+body {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    border: 2px black solid;
+}
+
+#sidebar {
+    background: black;
+}
+
+#logo {
+}
+
+#logo img {
+    height: 40px;
+    object-fit: contain;
+}
+
+.sidebar-links {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    color: lightslategrey;
+}
+
+.sidebar-links:hover {
+    color: white;
+}
+
+#install-app {
+    color: lightslategray;
+}
+
+#install-app:hover {
+    color: white;
+}
+/* #navigation {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    color: lightgrey;
+}
+
+#user-content {
+}
+
+#saved-playlists {
+} */ ;
