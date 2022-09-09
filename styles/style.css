@@ -1,14 +1,26 @@
+html {
+    height: 100%;
+}
+
 body {
-    display: grid;
-    grid-template-columns: 240px 1fr;
     border: 2px black solid;
+    height: 100%;
+}
+
+.body {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 40px 40px repeat(130px 40px);
+    grid-template-areas:
+        'user-name'
+        'greeting'
+        'footer';
 }
 
 #sidebar {
     background: black;
-}
-
-#logo {
+    height: 100%;
+    position: static;
 }
 
 #logo img {
@@ -20,6 +32,7 @@ body {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     color: lightslategrey;
+    padding: 5px;
 }
 
 .sidebar-links:hover {
@@ -28,19 +41,33 @@ body {
 
 #install-app {
     color: lightslategray;
+    position: absolute;
+    bottom: 0;
 }
 
 #install-app:hover {
     color: white;
 }
-/* #navigation {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    color: lightgrey;
+#user-name {
+    background: teal;
+    text-align: right;
 }
 
-#user-content {
+#greeting {
+    background: lightpink;
+    border: 2px black solid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33.3% 33.3% 33.3%;
+    grid-area: greeting;
 }
 
-#saved-playlists {
-} */ ;
+#footer {
+    background-color: darkolivegreen;
+    height: 40px;
+    grid-area: footer;
+}
+
+body > footer {
+    position: sticky;
+    top: 100vh;
+}
